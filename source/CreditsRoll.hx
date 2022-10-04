@@ -53,6 +53,10 @@ class CreditsRoll extends MusicBeatState
 		entertxt.borderStyle = FlxTextBorderStyle.OUTLINE;
 		add(entertxt);
 
+		#if android
+		addVirtualPad(NONE, A);
+		#end
+			
 		begincredits();
 	}
 
