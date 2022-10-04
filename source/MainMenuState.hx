@@ -14,6 +14,7 @@ import flixel.util.FlxTimer;
 import lime.app.Application;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
+
 import GameJolt.GameJoltAPI;
 import GameJolt.GameJoltLogin;
 
@@ -179,6 +180,9 @@ class MainMenuState extends MusicBeatState
 
 		changeItem();
 
+				#if android
+		addVirtualPad(UP_DOWN, A_B);
+		#end	
 		super.create();
 	}
 
