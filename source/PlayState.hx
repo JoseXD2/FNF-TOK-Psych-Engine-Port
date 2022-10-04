@@ -1644,7 +1644,12 @@ class PlayState extends MusicBeatState
 		doof.cameras = [camHUD];
 		doof2.cameras = [camHUD];
 		overlay.cameras = [camHUD];
-
+	
+                #if android
+		addAndroidControls();
+		androidControls.visible = true;
+		#end
+			
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
 		// UI_camera.zoom = 1;
@@ -2378,7 +2383,7 @@ class PlayState extends MusicBeatState
 
 		var songName:String = Paths.formatToSongPath(SONG.song);
 		var file:String = Paths.json(songName + '/events');
-		#if sys
+		#if windows 
 		if (FileSystem.exists(Paths.modsJson(songName + '/events')) || FileSystem.exists(file)) {
 		#else
 		if (OpenFlAssets.exists(file)) {
