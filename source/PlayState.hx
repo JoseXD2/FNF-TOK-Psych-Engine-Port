@@ -30,7 +30,7 @@ import flixel.math.FlxRect;
 import flixel.system.FlxSound;
 //PFP
 import flixel.effects.FlxFlicker;
-import GameJolt.GameJoltAPI;
+
 
 import flixel.text.FlxText;
 import flixel.tweens.FlxEase;
@@ -4767,31 +4767,31 @@ class PlayState extends MusicBeatState
 			coinmanager();	
 
 			if (Paths.formatToSongPath(curSong) == 'picnic-road')
-				GameJoltAPI.getTrophy(150042);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'eddy-river')
-				GameJoltAPI.getTrophy(150044);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'missile-maestro' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173488);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'elastic-entertainer' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173489);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'disco-devil' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173490);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'vellumental-battle' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173491);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'the-almighty-yape' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173492);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'monotoad' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173494);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'shifty-sticker' && storyDifficulty == 2 && songMisses == 0)
-				GameJoltAPI.getTrophy(173493);
+				
 
 			if (Paths.formatToSongPath(curSong) == 'picnic-road' && storyDifficulty == 2)
 				FlxG.save.data.prb = true;
@@ -4851,7 +4851,7 @@ class PlayState extends MusicBeatState
 				FlxG.save.data.psbb = true;
 
 			if (FlxG.save.data.prb == true && FlxG.save.data.rsbb == true && FlxG.save.data.mmb == true && FlxG.save.data.ambb == true && FlxG.save.data.erb == true && FlxG.save.data.eeb == true && FlxG.save.data.ysbb == true && FlxG.save.data.tanb == true && FlxG.save.data.ddb == true && FlxG.save.data.tgsb == true && FlxG.save.data.vbb == true && FlxG.save.data.ssb == true && FlxG.save.data.mb == true && FlxG.save.data.tbbqafeb == true && FlxG.save.data.bsbb == true && FlxG.save.data.ssb == true && FlxG.save.data.mpb == true && FlxG.save.data.tayb == true && FlxG.save.data.psbb == true)
-				GameJoltAPI.getTrophy(173485);
+				
 			
 
 
