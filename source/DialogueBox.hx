@@ -750,7 +750,7 @@ class DialogueBox extends FlxSpriteGroup
 		}
 		#end
 
-		if (FlxG.keys.justPressed.ANY  && dialogueStarted == true && canpress == true)
+		if (FlxG.keys.justPressed.ANY #if mobile || justTouched #end && dialogueStarted == true)
 		{
 			remove(dialogue);
 				
