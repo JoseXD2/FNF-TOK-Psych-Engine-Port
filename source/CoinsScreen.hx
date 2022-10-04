@@ -265,6 +265,10 @@ class CoinsScreen extends MusicBeatSubstate
 		hardbonus.alpha = 0;
 		add(hardbonus);
 
+		#if android
+		addVirtualPad(NONE, A);
+		#end
+			
         blackBox.alpha = 0;
 
         FlxTween.tween(blackBox, {alpha: 0.5}, 1, {ease: FlxEase.expoInOut});
@@ -348,7 +352,7 @@ class CoinsScreen extends MusicBeatSubstate
 	{
         super.update(elapsed);
 
-        if(FlxG.keys.justPressed.ENTER)
+        if(controls.ACCEPT)
         {
             if (okpressnowlol == true)
             {
