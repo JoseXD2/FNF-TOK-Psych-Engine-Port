@@ -262,6 +262,10 @@ class ShopState extends MusicBeatState
 		//bg.updateHitbox();
 		bg.screenCenter();
 		add(bg);
+			
+		#if android
+		addVirtualPad(LEFT_FULL, A_B);
+		#end	
 		}
 
 		if (FlxG.sound.music != null && FlxG.save.data.shop == false)
@@ -285,8 +289,10 @@ class ShopState extends MusicBeatState
 			PlayState.isStoryMode = false;
 			PlayState.storyDifficulty = 2;
 
+			#if windows 
 			GameJoltAPI.getTrophy(150047);
-
+                        #end
+				
 			LoadingState.loadAndSwitchState(new PlayState());
 
 			FlxG.sound.music.volume = 0;
