@@ -15,8 +15,6 @@ import lime.app.Application;
 import editors.MasterEditorMenu;
 import flixel.input.keyboard.FlxKey;
 
-import GameJolt.GameJoltAPI;
-import GameJolt.GameJoltLogin;
 
 #if windows
 import Discord.DiscordClient;
@@ -300,7 +298,7 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.BACK)
 			{
-				FlxG.switchState(new GameJoltLogin());
+				FlxG.switchState(new TitleState());
 			}
 
 			if (controls.ACCEPT && canselect == true)
