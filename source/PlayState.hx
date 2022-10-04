@@ -4875,16 +4875,16 @@ class PlayState extends MusicBeatState
 					MusicBeatState.switchState(new StoryMenuState());*/
 
 					if (WeekData.weeksList[storyWeek] == 'chapter1')
-						GameJoltAPI.getTrophy(150043);
+						
 
 					if (WeekData.weeksList[storyWeek] == 'chapter2')
-						GameJoltAPI.getTrophy(150046);
+						
 
 					if (WeekData.weeksList[storyWeek] == 'chapter3')
-						GameJoltAPI.getTrophy(150045);
+						
 
 					if (WeekData.weeksList[storyWeek] == 'chapter4')
-						GameJoltAPI.getTrophy(173484);
+						
 
 					if(!ClientPrefs.getGameplaySetting('practice', false) && !ClientPrefs.getGameplaySetting('botplay', false)) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
