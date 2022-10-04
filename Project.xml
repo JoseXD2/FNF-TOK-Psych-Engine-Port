@@ -123,7 +123,7 @@
 	<haxedev set='webgl' />
 
 	<!--Trophy tools-->
-	<haxelib name="tentools"if="windows" />
+	<haxelib name="tentools" if="windows" />
 	<haxelib name="systools" if="windows"/>
 	<ndll name="systools" haxelib="systools" if="windows" />
 
