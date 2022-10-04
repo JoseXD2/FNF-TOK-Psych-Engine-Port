@@ -13,7 +13,7 @@ import flixel.input.keyboard.FlxKey;
 
 import flixel.system.FlxSound;
 
-import GameJolt.GameJoltAPI;
+
 
 #if windows
 import Discord.DiscordClient;
@@ -395,11 +395,10 @@ class ShopState extends MusicBeatState
 		function bought():Void
 			{
 				if (FlxG.save.data.poutfitunlocked == true && FlxG.save.data.poutfit2unlocked == true && FlxG.save.data.soutfitunlocked == true && FlxG.save.data.goutfitunlocked == true)
-					GameJoltAPI.getTrophy(173486);
+					
 
 				if (FlxG.save.data.toadbbqunlocked == true && FlxG.save.data.autumnmountainunlocked == true && FlxG.save.data.shogunstudiosunlocked == true && FlxG.save.data.maxpowerunlocked == true && FlxG.save.data.bluestreamerunlocked == true)
-					GameJoltAPI.getTrophy(173487);
-
+					
 				purchased.visible = true;
 				purchased.animation.play('yay');
 				FlxG.sound.play(Paths.sound('purchased'));
