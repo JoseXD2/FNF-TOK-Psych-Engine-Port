@@ -735,25 +735,22 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		#if android
-                        var justTouched:Bool = false;
-
-		        for (touch in FlxG.touches.list)
-		        {
-			        if (touch.justPressed)
-			        {
-				        justTouched = true;
-			        }
-		        }
-		        #end	
 		
 
-			isEnding = true;
-			endDialogue();
+		#if android
+		var justTouched:Bool = false;
 
+		for (touch in FlxG.touches.list)
+		{
+			justTouched = false;
+			
+			if (touch.justReleased){
+				justTouched = true;
+			}
 		}
+		#end
 
-		if (PlayerSettings.player1.controls.ACCEPT #if android || justTouched #end)
+		if (FlxG.keys.justPressed.ANY  && dialogueStarted == true && canpress == true)
 		{
 			remove(dialogue);
 				
