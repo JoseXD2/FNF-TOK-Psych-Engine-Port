@@ -394,6 +394,18 @@ class CoinsScreen extends MusicBeatSubstate
             }	
             else if (!PlayState.hasendingdialog)
             {
+		PlayState.storyPlaylist = songArray;
+						PlayState.isStoryMode = true;
+						selectedWeek = true;
+			
+						var diffic = CoolUtil.getDifficultyFilePath(curDifficulty);
+						if(diffic == null) diffic = '';
+			
+						PlayState.storyDifficulty = curDifficulty;
+			
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
+						PlayState.campaignScore = 0;
+						PlayState.campaignMisses = 0;    
                 kill();   
                 LoadingState.loadAndSwitchState(new PlayState());
                 lolnocoins = false;
