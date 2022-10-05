@@ -5036,7 +5036,7 @@ class PlayState extends MusicBeatState
 
 		trace('went past this 4');
 
-		openSubState(new CoinsScreen(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
+	//	openSubState(new CoinsScreen(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
 		persistentUpdate = true;
 
